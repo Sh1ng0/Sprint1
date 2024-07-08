@@ -41,12 +41,12 @@ public class N1ejercicio3Main {
 			 * System.out.println(capitalCities.entrySet());
 			 */
 
-			System.out.println("Introduzca su nombre: ");
+			System.out.println("Insert your name: ");
 			String nombre = teclado.nextLine();
 			
-			for (int i = 0; i <= 10; i++) {
+			for (int i = 1; i <= 10; i++) {
       
-			System.out.println("¿Cuál es la capital de este país?");
+			System.out.println("What is the capital of this country?");
 			String randomKey = getRandomKey(capitalCities);
             
 			System.out.println(randomKey);
@@ -57,8 +57,7 @@ public class N1ejercicio3Main {
 					
 					
 				} else {
-					System.out.println("Incorrecto, " + nombre + ". La capital de " + randomKey + " es "
-							+ capitalCities.get(randomKey));
+					System.out.println("Nope, " + nombre + " the capital is: " +capitalCities.get(randomKey));
 				}
 
 			}
@@ -66,7 +65,7 @@ public class N1ejercicio3Main {
 			System.out.println(points.size());
 			
 			PrintWriter writer = new PrintWriter("concurso.txt");
-			writer.print(nombre+" ,su puntuación en el concurso ha sido de: "+points.size());
+			writer.print(nombre+" ,your score is: "+points.size());
 			writer.close();
 			
 			
