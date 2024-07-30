@@ -15,14 +15,14 @@ public class listaAlfabetica {
 
         if (!directory.isDirectory()) {
             System.out.println("La ruta proporcionada no es un directorio.");
-            return;
+           
         }
 
         
         String[] contents = directory.list();
         if (contents == null) {
             System.out.println("No se pudo obtener el contenido del directorio.");
-            return;
+           
         }
 
         

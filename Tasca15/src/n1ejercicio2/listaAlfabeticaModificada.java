@@ -16,7 +16,7 @@ public class listaAlfabeticaModificada {
 
         if (!directory.isDirectory()) {
             System.out.println("La ruta proporcionada no es un directorio.");
-            return;
+            
         }
 
         
@@ -28,7 +28,7 @@ public class listaAlfabeticaModificada {
         File[] contents = directory.listFiles();
         if (contents == null) {
             System.out.println("No se pudo obtener el contenido del directorio.");
-            return;
+            
         }
 
         

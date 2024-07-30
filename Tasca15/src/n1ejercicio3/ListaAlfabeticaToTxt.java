@@ -17,7 +17,7 @@ public class ListaAlfabeticaToTxt {
 
         if (!directory.isDirectory()) {
             System.out.println("La ruta proporcionada no es un directorio.");
-            return;
+            
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath))) {
@@ -33,7 +33,7 @@ public class ListaAlfabeticaToTxt {
         File[] contents = directory.listFiles();
         if (contents == null) {
             writer.write("No se pudo obtener el contenido del directorio.\n");
-            return;
+           
         }
 
        
