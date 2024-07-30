@@ -1,39 +1,70 @@
 package n1ejercicio1;
 
-public class NoGenericMethods<T,S,U> {
+public class NoGenericMethods {
 
-	private T tipo1;
-    private S tipo2;
-    private U tipo3;
+    private int edad;
+    private String nombre;
+    private double sueldo;
 
-   
-    public NoGenericMethods(T tipo1, S tipo2, U tipo3) {
-        this.tipo1 = tipo1;
-        this.tipo2 = tipo2;
-        this.tipo3 = tipo3;
+    
+    @Override
+	public String toString() {
+		return "NoGenericMethods [edad=" + edad + ", nombre=" + nombre + ", sueldo=" + sueldo + "]";
+	}
+
+	private NoGenericMethods(Builder builder) {
+        this.edad = builder.edad;
+        this.nombre = builder.nombre;
+        this.sueldo = builder.sueldo;
     }
 
-    public T getTipo1() {
-        return tipo1;
+    public int getEdad() {
+        return edad;
     }
 
-    public void setTipo1(T tipo1) {
-        this.tipo1 = tipo1;
+    public String getNombre() {
+        return nombre;
     }
 
-    public S getTipo2() {
-        return tipo2;
+    public double getSueldo() {
+        return sueldo;
     }
 
-    public void setTipo2(S tipo2) {
-        this.tipo2 = tipo2;
-    }
+    
+    public static class Builder {
+        private int edad = 7000;
+        private String nombre;
+        private double sueldo;
 
-    public U getTipo3() {
-        return tipo3;
-    }
+        public Builder() {}
 
-    public void setTipo3(U tipo3) {
-        this.tipo3 = tipo3;
+        public Builder edad(int edad) {
+            this.edad = edad;
+            return this;
+        }
+
+        public Builder nombre(String nombre) {
+            this.nombre = nombre;
+            return this;
+        }
+
+        public Builder sueldo(double sueldo) {
+            this.sueldo = sueldo;
+            return this;
+        }
+
+        public NoGenericMethods build() {
+            return new NoGenericMethods(this);
+        }
     }
 }
+    
+    
+    
+ 
+    
+    
+
+    
+    
+    
