@@ -7,7 +7,6 @@ public abstract class Trabajador {
 	protected float revenue;
 
 	public Trabajador(String name, String surname, float revenue) {
-		super();
 		this.name = name;
 		this.surname = surname;
 		this.revenue = revenue;
