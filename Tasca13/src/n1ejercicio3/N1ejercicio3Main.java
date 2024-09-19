@@ -20,7 +20,7 @@ public class N1ejercicio3Main {
 		ArrayList<String> points = new ArrayList<String>();
 
 		try (BufferedReader read = new BufferedReader(
-				new FileReader("\\Users\\Don José\\eclipse-workspace\\Tasca13\\src\\n1ejercicio3\\countries.txt"))) {
+				new FileReader("src/n1ejercicio3/countries.txt"))) {
 
 			HashMap<String, String> capitalCities = new HashMap<String, String>();
 
@@ -70,9 +70,9 @@ public class N1ejercicio3Main {
 			
 			
 		} catch (FileNotFoundException error) {
-
+        System.err.println("Archivo no encontrado");
 		} catch (IOException error) {
-
+        System.err.println("Error");
 		}
 
 	}
